@@ -114,7 +114,6 @@ foreach($src as $x => $sour){
 	if($x == 0)continue;
 	$no = explode('\"',$sour)[0];
 	$img = explode('\"',explode('data:image/png;base64,',$sour)[1])[0];
-	$antiBot[$no] = $img;
 	$data .= "&$no=$img";
 }
 //method=antibot
