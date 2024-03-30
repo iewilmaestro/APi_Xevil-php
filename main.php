@@ -64,7 +64,7 @@ Class ApiXevil extends RequestApi {
 		return $this->getResult($data "GET");
 	}
 	function Ocr($img){
-		$data = "method=base64&body=".$img;
+		$data = "method=base64&body=".trim(str_replace('data:image/png;base64,','',$img));
 		return $this->getResult($data);
 	}
 	function AntiBot($source){
