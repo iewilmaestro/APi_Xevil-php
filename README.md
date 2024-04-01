@@ -10,25 +10,26 @@ $api = new ApiXevil($apikey);
 # Balance
 ```php
 $balance = $api->getBalance();
-print " Balance: ".$balance."\n";;
+print " Balance: ".$balance."\n";
+# 15033
 ```
 
 # reCaptcha
 ```php
 $sitekey = "6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u";
 $pageurl = "https://2captcha.com/demo/recaptcha-v2";
-$reCaptcha = $api->RecaptchaV2($sitekey, $pageurl );
-print " reCaptcha: ".$reCaptcha."\n";
-# 03AFcWeA5dAXT8iT12IArrMsKLGrL2qgcGhPp2ES7BWgtPIa5GxGXorB
+print $api->RecaptchaV2($sitekey, $pageurl );
+print " reCaptcha: ".substr($reCaptcha,0,20)."\n";
+# 03AFcWeA4Rup5qQLKz3O
 ```
 
-# hCaptcha 0.0055
+# hCaptcha
 ```php
 $sitekey = "9409f20b-6b75-4057-95c4-138e85f69789";
 $pageurl = "https://2captcha.com/demo/hcaptcha?difficulty=always-on";
 $hCaptcha =  $api->Hcaptcha($sitekey, $pageurl );
-print " hCaptcha: ".$hCaptcha."\n";
-// P1_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.hadwYXNza2V5xQWA4
+print " hCaptcha: ".substr($hCaptcha,0,20)."\n";
+# P1_eyJ0eXAiOiJKV1QiL
 ```
 
 # turnstile
@@ -36,8 +37,8 @@ print " hCaptcha: ".$hCaptcha."\n";
 $pageurl = "https://onlyfaucet.com/faucet/currency/ltc";
 $sitekey = "0x4AAAAAAAPSP6CaBc510-qc";
 $Turnstile = $api->Turnstile($sitekey, $pageurl);
-print " turstile: ".$Turnstile."\n";
-# 0.5YsJy3i-JlJ7QYJnEVXlf6SH83xu7W125CFG060y
+print " turstile: ".substr($Turnstile,0,20)."\n";
+# 0.8IlRqCONhotKoKHZFk
 ```
 
 # image Ocr
