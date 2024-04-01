@@ -11,7 +11,7 @@ $api = new ApiXevil($apikey);
 ```php
 $balance = $api->getBalance();
 print " Balance: ".$balance."\n";
-# 15033
+# 2.754
 ```
 
 # reCaptcha
