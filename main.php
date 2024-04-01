@@ -111,7 +111,7 @@ error_reporting(0);
 # because no headers file get contents
 
 
-$apikey = "SoulqKkCaWdD7iWx5WNq7y6QuMpuljHm";
+$apikey = "APIKEY_XEVIL";
 $api = new ApiXevil($apikey);
 
 # Balance
