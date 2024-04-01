@@ -17,7 +17,7 @@ print " Balance: ".$balance."\n";;
 ```php
 $sitekey = "6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u";
 $pageurl = "https://2captcha.com/demo/recaptcha-v2";
-print $api->RecaptchaV2($sitekey, $pageurl );
+$reCaptcha = $api->RecaptchaV2($sitekey, $pageurl );
 print " reCaptcha: ".$reCaptcha."\n";
 # 03AFcWeA5dAXT8iT12IArrMsKLGrL2qgcGhPp2ES7BWgtPIa5GxGXorB
 ```
