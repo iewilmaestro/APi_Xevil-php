@@ -61,7 +61,7 @@ Class ApiXevil extends RequestApi {
 	}
 	function Turnstile($sitekey, $pageurl){
 		$data = "method=turnstile&sitekey=".$sitekey."&pageurl=".$pageurl;
-		return $this->getResult($data "GET");
+		return $this->getResult($data, "GET");
 	}
 	function Ocr($img){
 		$data = "method=base64&body=".trim(str_replace('data:image/png;base64,','',$img));
@@ -117,7 +117,7 @@ print " hCaptcha: ".$hCaptcha."\n";
 # turnstile
 $pageurl = "https://onlyfaucet.com/faucet/currency/ltc";
 $sitekey = "0x4AAAAAAAPSP6CaBc510-qc";
-$Turnstile = Turnstile($sitekey, $pageurl);
+$Turnstile = $api->Turnstile($sitekey, $pageurl);
 print " turstile: ".$Turnstile."\n";
 # 0.5YsJy3i-JlJ7QYJnEVXlf6SH83xu7W125CFG060y
 
@@ -127,13 +127,13 @@ print " turstile: ".$Turnstile."\n";
 # Example
 $img = base64_encode(file_get_contents("https://nopecha.com/image/demo/textcaptcha/00Ge55.png"));
 # print $img_source;exit;
-$Ocr = Ocr($img);
+$Ocr = $api->Ocr($img);
 print " ocr: ".$Ocr."\n";
 # o0ge55
 
 
 # anti-botlinks 
 $source = file_get_contents("https://bitonefaucet.com.tr/rsshort/index.php");
-$Antibot = AntiBot($source);
+$Antibot = $api->AntiBot($source);
 print " antibotlink: ".$Antibot."\n";
 # +1905+1004+8392+1024
