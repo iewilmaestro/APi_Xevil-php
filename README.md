@@ -45,7 +45,6 @@ print " turstile: ".$Turnstile."\n";
 # image as base64
 # Example
 $img = base64_encode(file_get_contents("https://nopecha.com/image/demo/textcaptcha/00Ge55.png"));
-# print $img_source;exit;
 $Ocr = $api->Ocr($img);
 print " ocr: ".$Ocr."\n";
 # o0ge55
